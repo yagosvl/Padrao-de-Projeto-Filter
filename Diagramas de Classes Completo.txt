@@ -1,0 +1,14 @@
+http://yuml.me/diagram/class/draw
+
+[FilterDemo|+main()]->[<<Interface>>;IF_FabricaAutomovel]
+[FilterDemo|+main()]->[<<Interface>>;Filter]
+[<<Interface>>;IF_FabricaAutomovel]^-.-[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]
+[<<Interface>>;Filter]^-.-[AlcoolFilter]
+[<<Interface>>;Filter]^-.-[GasolinaFilter]
+[<<Interface>>;Filter]^-.-[CarroFilter]
+[<<Interface>>;Filter]^-.-[FiltroCombinado]
+[<<Interface>>;Filter]->[<<Interface>>;Automovel]
+[<<Interface>>;Automovel]^-.-[Carro]
+[<<Interface>>;Automovel]^-.-[Moto]
+[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]->[Moto]
+[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]->[Carro]
