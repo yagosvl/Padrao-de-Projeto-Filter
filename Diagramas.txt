@@ -1,0 +1,8 @@
+[FilterDemo|+main()]->[<<Interface>>;IF_FabricaAutomovel]
+
+[<<Interface>>;IF_FabricaAutomovel]^-.-[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]
+
+[<<Interface>>;Automovel]^-.-[Carro]
+[<<Interface>>;Automovel]^-.-[Moto]
+[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]->[Moto]
+[FabricaAutomovel|+ CARRO = 0; + MOTO =1; +GASOLINA = 2; +ALCOOL =3]->[Carro]
