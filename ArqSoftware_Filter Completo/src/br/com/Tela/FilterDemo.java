@@ -17,13 +17,13 @@ public class FilterDemo {
 		List<Automovel> veiculos = new ArrayList<Automovel>();
 		IF_FabricaAutomovel fabrica = new FabricaAutomovel();
 		
-		veiculos.add(fabrica.criaAutomovel(1, 3));
-		veiculos.add(fabrica.criaAutomovel(1, 2));
-		veiculos.add(fabrica.criaAutomovel(0, 3));
-		veiculos.add(fabrica.criaAutomovel(1, 3));
-		veiculos.add(fabrica.criaAutomovel(0, 2));
-		veiculos.add(fabrica.criaAutomovel(0, 2));
-		veiculos.add(fabrica.criaAutomovel(1, 3));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.MOTO, FabricaAutomovel.ALCOOL));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.MOTO, FabricaAutomovel.GASOLINA));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.CARRO, FabricaAutomovel.ALCOOL));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.MOTO, FabricaAutomovel.ALCOOL));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.CARRO, FabricaAutomovel.GASOLINA));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.CARRO, FabricaAutomovel.GASOLINA));
+		veiculos.add(fabrica.criaAutomovel(FabricaAutomovel.MOTO, FabricaAutomovel.ALCOOL));
 		
 		Filter af = new AlcoolFilter();
 		Filter gf = new GasolinaFilter();
